@@ -64,9 +64,9 @@ It is highly recommended to use a virtual environment.
 
 ### Activate it
 *  ### On Linux/macOS:
-*  **```source venv/bin/activate```
+*  * ```source venv/bin/activate```
 *  ### On Windows:
-*  **```.\venv\Scripts\activate```
+*  * ```.\venv\Scripts\activate```
 
 ### Install the required packages
 *  ```pip install -r requirements.txt```
