@@ -4,7 +4,7 @@ from sqlalchemy.orm import declarative_base, relationship,sessionmaker
 from sqlalchemy.sql import func
 
 # --- Database Setup (SQLAlchemy) ---
-DATABASE_URL = "mysql+mysqlconnector://globaltx_eatup:8WpdhKnWZTi7@localhost/globaltx_tstbot" # <-- IMPORTANT: FILL THIS IN
+DATABASE_URL = "mysql+mysqlconnector://user:password@host/db_name" # <-- IMPORTANT: FILL THIS IN
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 # This Base is what all our models will inherit from
@@ -102,4 +102,5 @@ class Admin(Base):
     password_hash = Column(String(255), nullable=False) # Renamed from password/pwd
 
 # Create the table in the database if it doesn't exist
+
 # Base.metadata.create_all(bind=engine)
