@@ -52,26 +52,26 @@ The bot is configured using environment variables. Create a file named .env in t
 ```bash
 cp .env.example .env
 ```
-###Now, edit the .env file with your credentials:**
+###  Now, edit the .env file with your credentials:
 TELEGRAM_BOT_TOKEN="7523138028:YOUR_REAL_TOKEN_HERE"
 DATABASE_URL="mysql+mysqlconnector://user:password@host/db_name"
 
-**3. Set Up the Python Environment**
+### 3. Set Up the Python Environment
 It is highly recommended to use a virtual environment.
 
-# Create the virtual environment
+### Create the virtual environment
 ```python3 -m venv venv```
 
-# Activate it
-*  ##On Linux/macOS:
+### Activate it
+*  ### On Linux/macOS:
 *  **```source venv/bin/activate```
-*  ##On Windows:
+*  ### On Windows:
 *  **```.\venv\Scripts\activate```
 
-# Install the required packages
+### Install the required packages
 *  ```pip install -r requirements.txt```
 
-#4. Set Up the Database
+### 4. Set Up the Database
 *   Ensure your database is created and the credentials in your .env file are correct. Then, run the table creation script once.
 
 ```bash
@@ -79,14 +79,14 @@ python create_tables.py
 ```
 This will create all the necessary tables (users, deposit, referral, etc.) in your database.
 
-#Running the Bot
+### Running the Bot
 
 Once the setup is complete, you can start the bot.
 ```python bot.py```
 
 You should see the message "Bot is running..." in your terminal. You can now interact with your bot on Telegram.
 
-#Deploying to a Server
+### Deploying to a Server
 For 24/7 uptime, deploy the bot to your server and run it inside a screen session.
 Follow the installation steps on your server.
 Start a new screen session:
@@ -94,8 +94,8 @@ Start a new screen session:
 ```bash
 screen -S telegram-bot
 ```
-#📂 Project Structure
-.
+### 📂 Project Structure
+
 *  ├── bot.py                  # Main bot logic, handlers, and UI
 *  ├── botcontrol.py           # CRUD functions (Create, Read, Update, Delete)
 *  ├── database_models.py      # SQLAlchemy database table models
@@ -104,12 +104,12 @@ screen -S telegram-bot
 *  ├── .env                    # Local configuration (Tokens, DB URL) - DO NOT COMMIT
 *  └── .env.example            # Example configuration file
 
-#🤖 Bot Usage
+### 🤖 Bot Usage
 *  /start: Initializes the bot and shows the main menu.
 *  /language: Allows the user to change their language preference.
 *  Inline Menus: All other functionality is accessed through the interactive buttons.
 
-#🤝 Contributing
+### 🤝 Contributing
 *  Contributions are welcome! If you have suggestions for improvements or find a bug, please feel free to:
 *  Fork the repository.
 *  Create a new feature branch (git checkout -b feature/AmazingFeature).
@@ -129,6 +129,6 @@ from dotenv import load_dotenv
 
 load_dotenv() # This loads the variables from .env
 
-# Then, access the variables
+### Then, access the variables
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 DATABASE_URL = os.getenv("DATABASE_URL")
