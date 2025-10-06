@@ -6,9 +6,6 @@ A feature-rich, multilingual Telegram bot built with Python and SQLAlchemy. Mana
 
 A feature-rich, multilingual Telegram bot built with Python, SQLAlchemy, and the `python-telegram-bot` library. This bot provides an interactive inline menu for managing user subscriptions, referrals, and language preferences, with a clean and scalable architecture.
 
-![Demo Screenshot](https_your_image_link_here.png) 
-*(Suggestion: Add a screenshot of your bot in action here)*
-
 ---
 
 ## ✨ Key Features
