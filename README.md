@@ -60,19 +60,19 @@ DATABASE_URL="mysql+mysqlconnector://user:password@host/db_name"
 It is highly recommended to use a virtual environment.
 
 # Create the virtual environment
-python3 -m venv venv
+```python3 -m venv venv```
 
 # Activate it
-# On Linux/macOS:
-source venv/bin/activate
-# On Windows:
-.\venv\Scripts\activate
+*  ##On Linux/macOS:
+*  **```source venv/bin/activate```
+*  ##On Windows:
+*  **```.\venv\Scripts\activate```
 
 # Install the required packages
-pip install -r requirements.txt
+*  ```pip install -r requirements.txt```
 
-**4. Set Up the Database **
-Ensure your database is created and the credentials in your .env file are correct. Then, run the table creation script once.
+#4. Set Up the Database
+*   Ensure your database is created and the credentials in your .env file are correct. Then, run the table creation script once.
 
 ```bash
 python create_tables.py
@@ -82,7 +82,7 @@ This will create all the necessary tables (users, deposit, referral, etc.) in yo
 #Running the Bot
 
 Once the setup is complete, you can start the bot.
-python bot.py
+```python bot.py```
 
 You should see the message "Bot is running..." in your terminal. You can now interact with your bot on Telegram.
 
@@ -96,31 +96,31 @@ screen -S telegram-bot
 ```
 #📂 Project Structure
 .
-├── bot.py                  # Main bot logic, handlers, and UI
-├── botcontrol.py           # CRUD functions (Create, Read, Update, Delete)
-├── database_models.py      # SQLAlchemy database table models
-├── create_tables.py        # Script to initialize the database schema
-├── requirements.txt        # List of Python dependencies
-├── .env                    # Local configuration (Tokens, DB URL) - DO NOT COMMIT
-└── .env.example            # Example configuration file
+*  ├── bot.py                  # Main bot logic, handlers, and UI
+*  ├── botcontrol.py           # CRUD functions (Create, Read, Update, Delete)
+*  ├── database_models.py      # SQLAlchemy database table models
+*  ├── create_tables.py        # Script to initialize the database schema
+*  ├── requirements.txt        # List of Python dependencies
+*  ├── .env                    # Local configuration (Tokens, DB URL) - DO NOT COMMIT
+*  └── .env.example            # Example configuration file
 
 #🤖 Bot Usage
-/start: Initializes the bot and shows the main menu.
-/language: Allows the user to change their language preference.
-Inline Menus: All other functionality is accessed through the interactive buttons.
+*  /start: Initializes the bot and shows the main menu.
+*  /language: Allows the user to change their language preference.
+*  Inline Menus: All other functionality is accessed through the interactive buttons.
 
 #🤝 Contributing
-Contributions are welcome! If you have suggestions for improvements or find a bug, please feel free to:
-Fork the repository.
-Create a new feature branch (git checkout -b feature/AmazingFeature).
-Commit your changes (git commit -m 'Add some AmazingFeature').
-Push to the branch (git push origin feature/AmazingFeature).
-Open a Pull Request.
+*  Contributions are welcome! If you have suggestions for improvements or find a bug, please feel free to:
+*  Fork the repository.
+*  Create a new feature branch (git checkout -b feature/AmazingFeature).
+*  Commit your changes (git commit -m 'Add some AmazingFeature').
+*  Push to the branch (git push origin feature/AmazingFeature).
+*  Open a Pull Request.
 
 Final Step: You will need to slightly modify your bot.py and database_models.py to load the variables from the .env file instead of having them hardcoded.
-Install the library: pip install python-dotenv
-Add it to your requirements.txt.
-At the very top of bot.py and database_models.py, add:
+*  Install the library:  ``` pip install python-dotenv```
+*  Add it to your requirements.txt.
+*  At the very top of bot.py and database_models.py, add:
 
 ```Python
 import os
