@@ -45,14 +45,14 @@ Follow these instructions to get a copy of the project up and running on your lo
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
-
-**2. Create a Configuration File**
+```
+### 2. Create a Configuration File
 The bot is configured using environment variables. Create a file named .env in the project root by copying the example file.
-code
+
 ```bash
 cp .env.example .env
-
-**Now, edit the .env file with your credentials:**
+```
+###Now, edit the .env file with your credentials:**
 TELEGRAM_BOT_TOKEN="7523138028:YOUR_REAL_TOKEN_HERE"
 DATABASE_URL="mysql+mysqlconnector://user:password@host/db_name"
 
@@ -76,25 +76,25 @@ Ensure your database is created and the credentials in your .env file are correc
 
 ```bash
 python create_tables.py
-
+```
 This will create all the necessary tables (users, deposit, referral, etc.) in your database.
 
-**Running the Bot**
+#Running the Bot
 
 Once the setup is complete, you can start the bot.
 python bot.py
 
 You should see the message "Bot is running..." in your terminal. You can now interact with your bot on Telegram.
 
-**Deploying to a Server**
+#Deploying to a Server
 For 24/7 uptime, deploy the bot to your server and run it inside a screen session.
 Follow the installation steps on your server.
 Start a new screen session:
 
 ```bash
 screen -S telegram-bot
-
-**📂 Project Structure**
+```
+#📂 Project Structure
 .
 ├── bot.py                  # Main bot logic, handlers, and UI
 ├── botcontrol.py           # CRUD functions (Create, Read, Update, Delete)
@@ -104,12 +104,12 @@ screen -S telegram-bot
 ├── .env                    # Local configuration (Tokens, DB URL) - DO NOT COMMIT
 └── .env.example            # Example configuration file
 
-**🤖 Bot Usage**
+#🤖 Bot Usage
 /start: Initializes the bot and shows the main menu.
 /language: Allows the user to change their language preference.
 Inline Menus: All other functionality is accessed through the interactive buttons.
 
-**🤝 Contributing**
+#🤝 Contributing
 Contributions are welcome! If you have suggestions for improvements or find a bug, please feel free to:
 Fork the repository.
 Create a new feature branch (git checkout -b feature/AmazingFeature).
@@ -125,6 +125,7 @@ At the very top of bot.py and database_models.py, add:
 ```Python
 import os
 from dotenv import load_dotenv
+```
 
 load_dotenv() # This loads the variables from .env
 
